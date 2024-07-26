@@ -23,11 +23,13 @@ public class SchoolController {
     @Autowired
     private SchoolService schoolService;
 
-    @PostMapping("/save")
+    @PostMapping("/save1")
     public ResponseEntity<SchoolDto> save(
            @RequestBody SchoolDto schoolDto)
     {
         SchoolDto schoolDto1 = schoolService.saveSchool(schoolDto);
+        System.out.println("hi");
+        System.out.println("hi");
         return new ResponseEntity<>(schoolDto1, HttpStatus.CREATED);
     }
 
